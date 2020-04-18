@@ -5,6 +5,8 @@ const fs = require("fs");
 const app = new express();
 const PORT = 9409;
 
+app.use(express.urlencoded({ extended: true }));
+
 //  **  Page calls
 
 app.get("/", function(req, res) {
