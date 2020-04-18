@@ -124,7 +124,13 @@ function parseDiceCall(diceCall, res) {
         result = rollxDy(diceNumber, dieType, modifier);
     };
     // console.log(result);
-    res.end(result.toString());
+    // res.end(result.toString());
+
+    let retValue = {
+        roll: dieType,
+        result: result
+    };
+    res.end(result);
 };
 
 
