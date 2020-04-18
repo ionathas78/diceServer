@@ -51,6 +51,7 @@ app.get("/style.css", function(req, res) {
 app.get("/favicon.ico", function(req, res) {
     return null;
 })
+
 //  **  API calls
 
 app.get("/api/dice/fate:modifier", function(req, res) {
@@ -73,6 +74,19 @@ app.get("/api/dice/:dieType", function(req, res) {
         dieType = req.params.dieType.toLowerCase();
     };
     parseDiceCall(dieType, res);
+});
+
+
+app.get("*", function(req, res) {
+    let fileName = "./html/index.html";
+
+    fs.readFile(fileName, function(err, data) {
+        if (err) {
+            console.log(`Couldn't find '${fileName}'!`);
+            res.end();
+        };
+        res.end(data);
+    });
 });
 
 
