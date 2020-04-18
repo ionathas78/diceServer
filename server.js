@@ -3,9 +3,10 @@ const express = require("express");
 const fs = require("fs");
 
 const app = new express();
-const PORT = 9409;
+const PORT = 3000;
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //  **  Page calls
 
