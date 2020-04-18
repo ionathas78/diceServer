@@ -48,6 +48,9 @@ app.get("/style.css", function(req, res) {
     });
 });
 
+app.get("/favicon.ico", function(req, res) {
+    return null;
+})
 //  **  API calls
 
 app.get("/api/dice/fate:modifier", function(req, res) {
