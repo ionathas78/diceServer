@@ -1,0 +1,24 @@
+{
+  "name": "diceserver",
+  "version": "1.0.0",
+  "description": "Server for a dice utility API",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionathas78/diceServer.git"
+  },
+  "author": "Jonathan Andrews",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ionathas78/diceServer/issues"
+  },
+  "homepage": "https://github.com/ionathas78/diceServer#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^25.3.0"
+  }
+}
